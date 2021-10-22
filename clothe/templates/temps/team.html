@@ -1,0 +1,91 @@
+{% extends "temps/index.html" %}
+{% load static %}
+
+{% block title %}Django Ajax CRUD{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+section .blog .blog-post{
+    padding-top: 2rem ;
+}
+.blog h1,h5{
+    color: #F9A602 ;
+    text-align: center;
+    margin-top: 4%;
+}
+section .blog h4{
+    color: black;
+    text-align: center;
+}
+section  .blog-post .blog-content{
+    display: flex ;
+    flex-direction: column ;
+    text-align: center ;
+    width: 80% ;
+    /*height: 400px ;*/
+    margin: 1rem 2rem ;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.2) ;
+}
+.blog-post .blog-content img{
+    height: 360px;
+}
+section .blog-content .blog-title{
+    padding: 2rem 0 ;
+}
+.blog p{
+	font-size: 20px;
+	text-align: center;
+}
+</style>
+<section>
+	<div class="blog">
+		<h1>Our Team</h1><br>
+		<p>The passion behind the business</p>
+		<div class="contain">	
+			<div class="owl-carousel owl-theme blog-post">
+
+				<div class="blog-content" data-aos="fade-right" data-aos-delay="100">
+					<img src="{% static 'images/12.jpg' %}" alt="post-1">
+					<div class="blog-title">
+						<h2>Eric</h2>
+						<h5>Manager</h4>
+					</div>
+				</div>
+
+				<div class="blog-content" data-aos="fade-in" data-aos-delay="50">
+					<img src="{% static 'images/12.jpg' %}" alt="post-1">
+					<div class="blog-title">
+						<h2>Eric</h2>
+						<h5>Assistant Manager</h4>						
+				    </div>
+				</div>
+
+				<div class="blog-content" data-aos="fade-left" data-aos-delay="50">
+					<img src="{% static 'images/12.jpg' %}" alt="post-1">
+					<div class="blog-title">
+						<h2>Eric</h2>
+						<h5>Customer Service Representative</h4>
+					</div>
+				</div>
+			</div>	
+			<div class="owl-navigation">
+				<span class="owl-nav-prev"><i class="fa fa-fw fa-long-arrow-left"></i></span>
+				<span class="owl-nav-next"><i class="fa fa-fw fa-long-arrow-right"></i></span>
+			</div>
+	    </div>
+    </div>
+
+</section>
+<div class="faq-footer">
+	<p>0708472693</p>
+	<p><i class="fa fa-fw fa-facebook-official"></i>
+	<i class="fa fa-fw fa-twitter"></i>
+	<i class="fa fa-fw fa-instagram"></i>
+	<i class="fa fa-fw fa-youtube"></i>
+</p>
+	<h4 class="text-gray">
+		&copy; 2021 by GRESOD. All rights reserved created by Eric-Dev
+	</h4>
+</div>
+{% endblock %}

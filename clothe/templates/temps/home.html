@@ -1,0 +1,216 @@
+{% extends "temps/index.html" %}
+
+{% load static %}
+
+
+{% block content %}
+<!-- <style type="text/css">
+	.footer .move-up{
+    position: absolute;
+    right: 6%;
+    top: 400%;
+}
+</style> -->
+
+<main>
+
+	<section class="site-title">
+	<div class="site-background" data-aos="fade-up" data-aos-delay="100">
+		
+		<h1>GRESOD <br> Welcomes You</h1>
+		<a href="#contact"><button class="btn">Get in Touch</button></a>
+		<!-- <button class="btn">Get in Touch</button> -->
+	</div>
+</section>
+
+<!-- <section class="services">
+	<h1>Services</h1>
+	<h4>Exceeding Your Expectations</h4>
+</section> -->
+
+	<section>
+	<div class="blog" id="sercives">
+			<h1>Services</h1>
+<!-- 			<p>With a comprehensive range of services, Grasod can guarantee your technology needs are not just met, but exceeded. We work closely with our clients to create customized plans that are seamlessly integrated, effective and sustainable for many years to come. Reach out today to see how we can help.</p> -->
+	        <h4>Exceeding Your Expectations</h4>
+		<div class="contain">	
+			<div class="owl-carousel owl-theme blog-post">
+
+				<div class="blog-content" data-aos="fade-right" data-aos-delay="100">
+					<img src="{% static 'images/2.jpg' %}" alt="post-1">
+					<div class="blog-title">
+						<h5>Website & Software Development</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco.</p>
+						<!-- <button class="btn btn-blog">Read More..</button> -->
+						<a class="btn btn-blog" href="{% url 'service' %}">Read More..</a>
+					</div>
+				</div>
+
+				<div class="blog-content" data-aos="fade-in" data-aos-delay="50">
+					<img src="{% static 'images/6.jpg' %}" alt="post-1">
+					<div class="blog-title">
+						<h5>Network Services</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco.</p>						
+						<!-- <button class="btn btn-blog">Read More..</button> -->
+						<a class="btn btn-blog" href="{% url 'service' %}">Read More..</a>
+				    </div>
+				</div>
+				<div class="blog-content" data-aos="fade-left" data-aos-delay="100">
+					<img src="{% static 'images/11.jpg' %}" alt="post-1">
+					<div class="blog-title">
+						<h5>Graphic Design</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco.</p>							
+						<!-- <button  class="btn btn-blog">Read More..</button> -->
+						<a class="btn btn-blog" href="{% url 'service' %}">Read More..</a>
+					</div>
+				</div>				
+
+				<div class="blog-content" data-aos="fade-left" data-aos-delay="50">
+					<img src="{% static 'images/7.jpg' %}" alt="post-1">
+					<div class="blog-title">
+						<h5>CyberSecurity & Privacy</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco.</p>						
+						<!-- <button class="btn btn-blog">Read More..</button> -->
+						<a class="btn btn-blog" href="{% url 'service' %}">Read More..</a>
+					</div>
+				</div>
+				
+				<div class="blog-content" data-aos="fade-right" data-aos-delay="100">
+					<img src="{% static 'images/9.jpg' %}" alt="post-1">
+					<div class="blog-title">
+						<h5>Hardware Maintenance</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco.</p>							
+						<!-- <button class="btn btn-blog">Read More..</button> -->
+						<a class="btn btn-blog" href="{% url 'service' %}">Read More..</a>
+					</div>
+				</div>
+
+				<div class="blog-content" data-aos="fade-in" data-aos-delay="100">
+					<img src="{% static 'images/10.jpg' %}" alt="post-1">
+					<div class="blog-title">
+						<h5>Robotics & AI</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco.</p>							
+						<!-- <button class="btn btn-blog">Read More..</button> -->
+						<a class="btn btn-blog" href="{% url 'service' %}">Read More..</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="owl-navigation">
+				<span class="owl-nav-prev"><i class="fa fa-fw fa-long-arrow-left"></i></span>
+				<span class="owl-nav-next"><i class="fa fa-fw fa-long-arrow-right"></i></span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="open-site">
+	<div class="open-background" data-aos="fade-down" data-aos-delay="100">
+		<h2>Opening Hours</h2>
+		<h3>Come Visit</h3>
+		<h5>Mon - Fri: 8am - 5pm</h5>
+		<h5>Sat: 10am - 3pm</h5>
+		<h5>Sun & Holidays: Closed</h5>
+	</div>
+</section>
+
+<section>
+	<div class="about" id="about">
+		<div class="contain">
+		    <div class="about-us" data-aos="fade-right" data-aos-delay="100">
+			    <h2>About</h2>
+			    <p>As one of the leading local businesses in the San Francisco area, we attribute our reputation to the lasting customer relationships we’ve developed throughout the years. We believe that all of our customers deserve the highest level of service, and we are committed to providing just that.<br><br>Explore the rest of our site to learn more about what we have to offer, and get in touch with any questions. Gresod is here for you.</p>
+		    </div>
+
+<div class="comment" data-aos="fade-left" data-aos-delay="200" id="contact">
+ <div class="contact" id="contact">
+    <div class="container">
+        <div class="row">
+            <form method="post" action="" role="" id="post-form-base">
+                {% csrf_token %}
+            <h2>Leave a Message</h2>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="input-group input-group-lg wow fadeInUp" data-wow-delay='0.2s' style="">
+                    <input  type="text" name="fullname" id="fullname" class="form-control" aria-describedby="sizing-addon1" placeholder="Full Name">
+                </div>
+                <div class="input-group input-group-lg wow fadeInUp" data-wow-delay='0.6s' >
+                    <input  type="email" name="email" id="email" class="form-control" aria-describedby="sizing-addon1" placeholder="Email Address">
+                </div>
+                <div class="input-group input-group-lg wow fadeInUp" data-wow-delay='0.8s' >
+                    <input type="text" name="phonenumber" id="phonenumber" class="form-control" aria-describedby="sizing-addon1" placeholder="Phone">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="input-group wow fadeInUp" data-wow-delay='0.9s'>
+                    <textarea class="form-control" id="info" name="body" cols="30" rows="4" placeholder="Write your message here....."></textarea>
+                </div><br>
+                <button style="margin-left: 35px;"  type="submit" class="btn btn-success btn-lg wow fadeInUp" data-wow-delay='2s'>Submit your message</button>
+            </div>
+
+            </form>
+        </div>
+    </div>
+ </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+
+
+</main>
+
+<!-- .......foooter.... -->
+<footer class="footer">
+	<div class="contain">
+		<div class="newsletter" data-aos="fade-right" data-aos-delay="200">
+			
+			<h6>Nanyuki, Bemwaki Tower</h6>
+			<h6>ericmuchiri764@gmail.com</h6>
+			<h6>0708472693</h6>
+<!-- 			<p>Stay updated</p>
+			<div class="form-element">
+				<input type="text" placeholder="Email"><span><i class="fa fa-chevron-right"></i></span>
+			</div> -->
+		</div>
+
+		<div class="follow" data-aos="fade-left" data-aos-delay="100">
+			<h2>Follow Us</h2>
+			<p>Let us be social</p>
+			<div>
+				<i class="fa fa-fw fa-facebook-official"></i>
+				<i class="fa fa-fw fa-twitter"></i>
+				<i class="fa fa-fw fa-instagram"></i>
+				<i class="fa fa-fw fa-youtube"></i>
+			</div>
+		</div>
+	</div>	
+		<div class="move-up">
+		<span><i class="fa fa-fw fa-arrow-circle-up fa-2x"></i></span>
+	</div>
+	<div class="rights flex-row">
+		<h4 class="text-gray">
+			&copy; 2021 by GRESOD. All rights reserved created by Eric-Dev
+		</h4>
+	</div>
+
+
+</footer>
+<!-- <a class="btn btn-primary btn-lg btn-floating" style="background-color: #ac2bac" href="#!" role="button">Lets Chat</a> -->
+
+
+<!-- .....endfooter.... -->
+{% endblock%}

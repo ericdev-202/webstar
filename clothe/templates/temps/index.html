@@ -1,0 +1,255 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/aos.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/app.css'%}">
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"> -->
+	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap-5/css/bootstrap.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'fontawesome-5/css/fontawesome.css'%}">
+</head>
+<style type="text/css">
+	*{padding:0;margin:0;}
+
+
+.float{
+    position:fixed;
+    width:160px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#0C9;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    box-shadow: 2px 2px 3px #999;
+}
+@media screen and (max-width: 750px){
+	.float{
+	}
+}
+.my-float{
+    margin-top:22px;
+}
+ 	.navbar{
+ 		width: 100%;
+ 	}
+ 	.navbar-nav{
+ 		/*margin-left: 500px !important;*/
+ 		padding: 10px !important;
+ 	}
+ 	.nav-item{
+ 		padding: 10px;
+ 	}
+
+
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  /*min-height: 200px;*/
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+	/* The Modal (background) */
+.mod {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9; /* Sit on top */
+  left: 0;
+  top: 0;
+  margin-top: 100px;
+  margin-left: 70%;
+  width: 30%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  /*background-color: rgb(0,0,0); /* Fallback color */*/
+  /*background-color: rgba(0,0,0,0.4); /* Black w/ opacity */*/
+}
+
+/* Modal Content/Box */
+.mod-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+</style>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+	  <div class="container-fluid">
+	    <img style="width: 160px; height: 100px;" class="navbar-brand" href="#" img src="{% static 'images/sgn.png' %}">
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      <ul class="navbar-nav ms-auto mb-2 mb-lg-4 ">
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Home</a>
+	        </li>
+	        <li class="nav-item">
+	        	<a class="nav-link active" aria-currect="page" href="#">Book Online</a>
+	        </li>
+	         <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="#about">About</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="#sercives">Services</a>
+	        </li>	       
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="{% url 'team' %}">Team</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="{% url 'contact' %}">Contacts</a>
+	        </li>	        	
+	        <li class="nav-item">
+	        	<a class="nav-link active" aria-current="page" href="{% url 'FAQ' %}">FAQ</a>
+	        </li>         
+<!-- 	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            Others
+	          </a>
+	          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+	            <li><a class="dropdown-item" href="#">FAQ</a></li>
+	            <li><a class="dropdown-item" href="#">TEAM</a></li>
+	            <li><hr class="dropdown-divider"></li>
+	            <li><a class="dropdown-item" href="#">LOG OUT</a></li>
+	          </ul>
+	        </li> -->
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+
+	<!-- Trigger/Open The Modal -->
+<button id="myBtn" class="float"><i class="fa fa-comment" class="my-float"></i>  Chat With Us</button>
+
+<!-- The Modal -->
+<div id="myModal" class="mod">
+
+  <!-- Modal content -->
+  <div class="mod-content">
+    <!-- <span class="close">&times;</span> -->
+     <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+  </div>
+
+</div>
+
+
+
+{% block content %}
+{% endblock %}
+
+<script type="text/javascript">
+	// Get the modal
+var mod = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  mod.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+// span.onclick = function() {
+//   mod.style.display = "none";
+// }
+function closeForm() {
+  document.getElementById("myModal").style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == mod) {
+    mod.style.display = "none";
+  }
+}
+</script>
+
+<script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/aos.js' %}"></script>
+<!-- <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script> -->
+<script type="text/javascript" src="{% static 'bootstrap-5/js/bootstrap.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+
+</body>
+</html>
